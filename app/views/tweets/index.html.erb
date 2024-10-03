@@ -1,5 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
+<%= form_with url: tweets_path, method: :get do |form|%> 
+  <%= form.text_field :query_text, placeholder: t('Query text'), value: params[:query_text]%>
+  <%= submit_tag "Buscar" %>
+<%end%>
+
 <% content_for :title, "Tweets" %>
 
 <h1>Tweets</h1>
