@@ -1,0 +1,43 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+
+development:
+  <<: *default
+  database: carlos1970
+  username: carlos1970
+  password: junior2006
+  host: localhost
+  port: 5432
+  
+  #schema_search_path: myapp,sharedapp,public
+
+  # Minimum log levels, in increasing order:
+  #   debug5, debug4, debug3, debug2, debug1,
+  #   log, notice, warning, error, fatal, and panic
+  # Defaults to warning.
+  #min_messages: notice
+
+
+test:
+  <<: *default
+  database: clon_twitter_test
+
+#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+
+#   production:
+#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+#
+# Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
+# for a full overview on how database connection configuration can be specified.
+#
+production:
+  <<: *default
+  database: clon_twitter_production
+  username: clon_twitter
+  password: <%= ENV["CLON_TWITTER_DATABASE_PASSWORD"] %>
