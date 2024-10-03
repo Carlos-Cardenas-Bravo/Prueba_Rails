@@ -14,14 +14,59 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css', media: 'all', 'data-turbolinks-track': 'reload' %> 
+
   </head>
 
   <body>
-    <div class="container">
-      <%= yield %>
-    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <!-- Barra lateral izquierda -->
+          <div class="column is-2">
+            <aside class="menu">
+              <ul class="menu-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Notificaciones</a></li>
+                <li><a href="#">Mensajes</a></li>
+              </ul>
+            </aside>
+          </div>
+  
+          <!-- Contenido principal -->
+          <div class="column is-7">
+            <%= yield %>
+          </div>
+  
+          <!-- Barra lateral derecha -->
+          <div class="column is-3">
+            <aside>
+              <!-- Buscador -->
+              <%= form_with url: tweets_path, method: :get, local: true do |form| %>
+                <div class="field has-addons">
+                  <div class="control">
+                    <%= form.text_field :query_text, placeholder: "Search tweets...", value: params[:query_text], class: "input" %>
+                  </div>
+                  <div class="control">
+                    <%= submit_tag "Search", class: "button is-primary" %>
+                  </div>
+                </div>
+              <% end %>
+              <h4 class="title is-4, mt-4">Tendencias</h4>
+              <ul>
+                <li>#Tendencia1</li>
+                <li>#Tendencia2</li>
+                <li>#Tendencia3</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+
   </body>
 </html>
+

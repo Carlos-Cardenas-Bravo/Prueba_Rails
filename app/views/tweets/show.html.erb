@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<p class="notification is-success"><%= notice %></p>
 
-<%= render @tweet %>
+<section class="section">
+  <div class="container">
+    <%= render @tweet %>
 
-<div>
-  <%= link_to "Edit this tweet", edit_tweet_path(@tweet) %> |
-  <%= link_to "Back to tweets", tweets_path %>
+    <div class="mt-4">
+      <%= link_to "Edit this tweet", edit_tweet_path(@tweet), class: "button is-info" %> |
+      <%= link_to "Back to tweets", tweets_path, class: "button is-light" %> |
+      <%= button_to "Destroy this tweet", @tweet, method: :delete, class: "button is-danger" %>
+    </div>
+  </div>
+</section>
 
-  <%= button_to "Destroy this tweet", @tweet, method: :delete %>
-</div>

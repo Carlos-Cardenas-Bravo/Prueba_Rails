@@ -1,23 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Tweets</h1>
+    
+    <!-- Nuevo tweet -->    
+    <div class="mt-4">
+      <%= link_to "New tweet", new_tweet_path, class: "button is-primary" %>
+    </div>
 
-<%= form_with url: tweets_path, method: :get do |form|%> 
-  <%= form.text_field :query_text, placeholder: t('Query text'), value: params[:query_text]%>
-  <%= submit_tag "Buscar" %>
-<%end%>
+    <!-- Despliega tweets -->
+    <div id="tweets"class="mt-4"> <!-- Agregamos mt-4 aquí -->
+      <% @tweets.each do |tweet| %>
+        <%= render tweet %>
 
-<% content_for :title, "Tweets" %>
+      <% end %>
+    </div>
 
-<h1>Tweets</h1>
+    <!-- Paginación -->
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New tweet", new_tweet_path %>
-
-<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+  </div>
+</section>
