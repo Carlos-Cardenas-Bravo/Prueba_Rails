@@ -5,9 +5,9 @@
     <%= render @tweet %>
 
     <div class="mt-4">
-      <%= link_to "Edit this tweet", edit_tweet_path(@tweet), class: "button is-info" %> |
-      <%= link_to "Back to tweets", tweets_path, class: "button is-light" %> |
-      <%= button_to "Destroy this tweet", @tweet, method: :delete, class: "button is-danger" %>
+      <%= link_to "Editar Tweet", edit_tweet_path(@tweet), class: "button is-info" %> |
+      <%= link_to "Desplegar Tweet", tweets_path, class: "button is-light" %> |
+      <%= button_to "Eliminar Tweet", @tweet, method: :delete, class: "button is-danger" %>
     </div>
   </div>
 </section>

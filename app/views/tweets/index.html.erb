@@ -4,11 +4,11 @@
     
     <!-- Nuevo tweet -->    
     <div class="mt-4">
-      <%= link_to "New tweet", new_tweet_path, class: "button is-primary" %>
+      <%= link_to "Nuevo Tweet", new_tweet_path, class: "button is-primary" %>
     </div>
 
     <!-- Despliega tweets -->
-    <div id="tweets"class="mt-4"> <!-- Agregamos mt-4 aquí -->
+    <div id="tweets"class="mt-4"> 
       <% @tweets.each do |tweet| %>
         <%= render tweet %>
 

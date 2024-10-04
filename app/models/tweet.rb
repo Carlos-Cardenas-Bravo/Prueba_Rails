@@ -9,4 +9,5 @@ class Tweet < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
 end
