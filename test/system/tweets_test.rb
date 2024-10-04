@@ -12,23 +12,23 @@ class TweetsTest < ApplicationSystemTestCase
 
   test "should create tweet" do
     visit tweets_url
-    click_on "New tweet"
+    click_on "Nuevo Tweet"
 
     fill_in "Description", with: @tweet.Description
     fill_in "Username", with: @tweet.UserName
-    click_on "Create Tweet"
+    click_on "Tweet"
 
-    assert_text "Tweet was successfully created"
+    assert_text "Tweet creado exitosamente"
     click_on "Back"
   end
 
   test "should update Tweet" do
     visit tweet_url(@tweet)
-    click_on "Edit this tweet", match: :first
+    click_on "Editar Tweet", match: :first
 
     fill_in "Description", with: @tweet.Description
     fill_in "Username", with: @tweet.UserName
-    click_on "Update Tweet"
+    click_on "Editar Tweet"
 
     assert_text "Tweet was successfully updated"
     click_on "Back"
@@ -36,8 +36,8 @@ class TweetsTest < ApplicationSystemTestCase
 
   test "should destroy Tweet" do
     visit tweet_url(@tweet)
-    click_on "Destroy this tweet", match: :first
+    click_on "Eliminar Tweet", match: :first
 
-    assert_text "Tweet was successfully destroyed"
+    assert_text "Tweet eliminado exitosamente"
   end
 end

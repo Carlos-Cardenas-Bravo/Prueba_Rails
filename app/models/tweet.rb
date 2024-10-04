@@ -3,11 +3,10 @@ class Tweet < ApplicationRecord
 
   pg_search_scope :search_full_text,
     against: {
-      Description: 'A',  
-      UserName: 'B'      
+      Description: "A",
+      UserName: "B"
     },
     using: {
       tsearch: { prefix: true }
     }
-
 end

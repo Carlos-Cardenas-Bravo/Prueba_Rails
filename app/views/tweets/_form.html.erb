@@ -11,22 +11,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :description, "Description", class: "label" %>
+    <%= form.label :Description, "Description", class: "label" %>
     <div class="control">
-      <%= form.text_area :description, class: "textarea", placeholder: "Escribe aqui tu mensaje" %>
+      <%= form.text_area :Description, class: "textarea", placeholder: "Escribe aqui tu mensaje" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :username, "Username", class: "label" %>
+    <%= form.label :UserName, "UserName", class: "label" %>
     <div class="control">
-      <%= form.text_field :username, class: "input", placeholder: "Tu username" %>
+      <%= form.text_field :UserName, class: "input", placeholder: "Tu username" %>
     </div>
   </div>
 
   <div class="field">
     <div class="control">
-      <%= form.submit "Tweet", class: "button is-primary" %>
+      <%= form.submit "Crear Tweet", class: "button is-primary" %>
     </div>
   </div>
 <% end %>

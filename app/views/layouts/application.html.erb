@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html>
   <head>
     <title><%= content_for(:title) || "Clon Twitter" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,6 +49,18 @@
   
           <!-- Contenido principal -->
           <div class="column is-7">
+            <% if flash[:notice] %>
+              <div class="notification is-success">
+                <%= flash[:notice] %>
+              </div>
+            <% end %>
+          
+            <% if flash[:alert] %>
+              <div class="notification is-danger">
+                <%= flash[:alert] %>
+              </div>
+            <% end %>
+
             <%= yield %>
           </div>
   

@@ -4,13 +4,20 @@ class TweetsController < ApplicationController
   # GET /tweets or /tweets.json
   def index
     if params[:query_text].present?
-      # Si hay una búsqueda, usa el método de búsqueda con paginación
+      # Realiza la búsqueda con paginación
       @pagy, @tweets = pagy(Tweet.search_full_text(params[:query_text]))
+      
+      # Si no se encuentran tweets, muestra un mensaje y redirige a la lista completa
+      if @tweets.empty?
+        flash[:alert] = "No se encontraron tweets que coincidan con la búsqueda."
+        redirect_to tweets_path and return
+      end
     else
       # Si no hay búsqueda, lista todos los tweets con paginación
       @pagy, @tweets = pagy(Tweet.all)
     end
   end
+  
 
 
   # GET /tweets/1 or /tweets/1.json
