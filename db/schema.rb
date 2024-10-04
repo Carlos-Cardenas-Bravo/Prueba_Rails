@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_03_014053) do
   enable_extension "plpgsql"
 
   create_table "tweets", force: :cascade do |t|
-    t.text "Description"
+    t.string "Description"
     t.string "UserName"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
