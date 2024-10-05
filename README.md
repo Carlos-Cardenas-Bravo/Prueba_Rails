@@ -11,3 +11,7 @@ tweets.
 - [@ROBINSONDURAN](https://www.github.com/ROBINSONDURAN)
 - [@cristobalabs98](https://github.com/cristobalabs98)
 - [@Carlos-Cardenas-Bravo](https://github.com/Carlos-Cardenas-Bravo)
+
+## 🚀 About Me
+I'm a human apprentice
+
