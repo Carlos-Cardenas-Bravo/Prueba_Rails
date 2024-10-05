@@ -1,24 +1,13 @@
-# README
+# DESARROLLO RUBY ON RAILS PARA EMPRENDIMIENTOS DE TIPO STARTUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prueba - Introducción a desarrollo de aplicaciones
+con Ruby on Rails.
 
-Things you may want to cover:
+Este desarrollo busca simular el comportamiento de twitter en cuanto a su lógica de implementación y publicación de
+tweets.
 
-* Ruby version
+## Autores
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [@ROBINSONDURAN](https://www.github.com/ROBINSONDURAN)
+- [@cristobalabs98](https://github.com/cristobalabs98)
+- [@Carlos-Cardenas-Bravo](https://github.com/Carlos-Cardenas-Bravo)
