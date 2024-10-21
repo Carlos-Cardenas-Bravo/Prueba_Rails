@@ -56,7 +56,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "faker", "~> 3.4"
+gem "faker", "~> 3.5"
 
 gem "pg_search", "~> 2.3"
 
